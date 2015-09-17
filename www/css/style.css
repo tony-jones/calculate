@@ -1,0 +1,128 @@
+/*
+ * Calculate CSS
+ * A simple handy calculator by @iamtonybagels
+ * https://github.com/tony-jones/calculate
+ */
+
+html {
+  font-size: 100%; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  position: relative;
+  min-height: 100%;
+}
+
+/*
+ * Addresses margins handled incorrectly in IE6/7.
+ */
+
+body {
+  margin: 0;
+  height: 100%;
+}
+ /* Preserve some sanity */
+.grid,
+.unit {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Set up some rules to govern the grid */
+.grid {
+  display: block;
+  clear: both;
+}
+.grid .unit {
+  float: left;
+  width: 100%;
+}
+
+/* Width classes also have shorthand versions numbered as fractions
+ * For example: for a grid unit 1/3 (one third) of the parent width,
+ * simply apply class="w-1-3" to the element. */
+.grid .whole          { width: 100%; }
+.grid .half           { width: 50%; }
+.grid .one-third      { width: 33.3332%; }
+.grid .two-thirds     { width: 66.6665%; }
+.grid .one-quarter    { width: 25%; }
+.grid .three-quarters { width: 75%; }
+.grid .one-fifth      { width: 20%; }
+.grid .two-fifths     { width: 40%; }
+.grid .three-fifths   { width: 60%; }
+.grid .four-fifths    { width: 80%; }
+
+/* Clearfix after every .grid */
+.grid {
+  *zoom: 1;
+}
+.grid:before, .grid:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.grid:after {
+  clear: both;
+}
+
+/* Utility classes */
+.align-center { text-align: center; }
+.align-left   { text-align: left; }
+.align-right  { text-align: right; }
+.pull-left    { float: left; }
+.pull-right   { float: right; }
+
+/* Colors */
+.blue   { background-color: #88C4CC; }
+.red    { background-color: #D81C60; }
+.grey   { background-color: #4A4A4A; }
+.white  { background-color: #FFFFFF; }
+.orange { background-color: #E6B400; }
+
+.text-white { color: #FFFFFF; }
+.text-grey  { color: #333333; }
+
+.blue, 
+.red, 
+.grey, 
+.white, 
+.orange {
+  border-bottom: 1px solid #FFFFFF;
+}
+
+a:visited, a {
+  color: #FFFFFF;
+}
+
+/* Input Screen */
+.screen {
+  width: 100%;
+  text-align: right;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.screen_primary {
+  font-size: 60px;
+  padding: 30px;
+}
+.screen_secondary {
+  font-size: 21px;
+  padding: 30px;
+}
+.button {
+  height: 75px;
+  color: white;
+  font-size: 28px;
+  padding-top: 15px;
+  border-bottom: 1px solid #FFFFFF;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius:0px;
+}
+.keypad {
+  position: absolute;
+  left: 0;
+  bottom: -628px;
+  width: 98%;
+  margin: 15px 4px 4px 4px;
+}
